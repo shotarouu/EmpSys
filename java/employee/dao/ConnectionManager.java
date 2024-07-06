@@ -8,7 +8,7 @@ public class ConnectionManager {
 	//データベース接続情報
 	private static final String URL = "jdbc:mysql://localhost:3306/MySQL?allowPublicKeyRetrieval=true&useSSL=false";
 	private static final String USER = "root";
-	private static final String PASSWORD = "yanashou0506";
+	private static final String PASSWORD = "";
 	
 	public static Connection getConnection() throws SQLException,ClassNotFoundException{
 		
