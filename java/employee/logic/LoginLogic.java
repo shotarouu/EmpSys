@@ -21,7 +21,7 @@ public class LoginLogic {
 			 boolean result = loginDAO.findEmployee(empId,password);
 			 
 			 if(result == false) {
-				 throw new EmployeeBusinessException("ログインに失敗しました");
+				 throw new EmployeeSystemException("ログインに失敗しました");
 			 }
 			 
 			 EmployeeDAO employeeDAO = new EmployeeDAO(con);
@@ -29,7 +29,7 @@ public class LoginLogic {
 			 employee = employeeDAO.findEmployeeById(empId);
 			 
 			 if(employee == null) {
-				 throw new EmployeeBusinessException("ログインに失敗しました");
+				 throw new EmployeeSystemException("ログインに失敗しました");
 			 }
 			 
 		} catch (SQLException e) {

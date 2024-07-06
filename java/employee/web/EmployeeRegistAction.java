@@ -54,7 +54,7 @@ public class EmployeeRegistAction implements ActionIF {
 			//業務ロジックの呼び出し
 			EmployeeFindLogic logic = new EmployeeFindLogic();
 			Employee employee = null;
-			
+
 			employee = logic.findEmployeeById(Integer.parseInt(empId));
 
 			if (employee != null) {
@@ -75,6 +75,7 @@ public class EmployeeRegistAction implements ActionIF {
 		} catch (EmployeeBusinessException e) {
 			request.setAttribute("errorMessage", e.getMessage());
 			request.setAttribute("errorMessageList", e.getMessage());
+			errorList.clear();
 			page = "EmployeeRegistView.jsp";
 
 		} catch (EmployeeSystemException e) {

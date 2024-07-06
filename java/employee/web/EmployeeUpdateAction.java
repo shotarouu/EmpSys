@@ -66,6 +66,7 @@ public class EmployeeUpdateAction implements ActionIF {
 		} catch (EmployeeBusinessException e) {
 			request.setAttribute("errorMessage", e.getMessage());
 			request.setAttribute("errorMessageList", e.getMessage());
+			errorList.clear();
 			page = "EmployeeRegistView.jsp";
 
 		} catch (EmployeeSystemException e) {
