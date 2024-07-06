@@ -54,7 +54,6 @@ public class EmployeeDeleteAction implements ActionIF {
 
 		} catch (EmployeeBusinessException e) {
 			request.setAttribute("errorMessage", e.getMessage());
-			request.setAttribute("errorMessageList", e.getMessage());
 			page = "EmployeeFindView.jsp";
 
 		} catch (EmployeeSystemException e) {

@@ -44,7 +44,7 @@ public class EmployeeFindAllAction implements ActionIF{
 			
 		} catch(EmployeeBusinessException e) {
 			request.setAttribute("errorMessage", e.getMessage());
-			request.setAttribute("errorMessageList", e.getMessage());
+			request.setAttribute("errorMessageList", e.getMessageList());
 			page = "EmployeeFindAllResultView.jsp";
 			
 		} catch(EmployeeSystemException e) {

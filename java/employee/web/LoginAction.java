@@ -56,6 +56,7 @@ public class LoginAction implements ActionIF {
 		} catch (EmployeeBusinessException e) {
 			request.setAttribute("errorMessage", e.getMessage());
 			request.setAttribute("errorMessageList", errorMessageList);
+			errorMessageList.clear();
 			page = "LoginPage.jsp";
 		} catch (EmployeeSystemException e) {
 			request.setAttribute("errorMessage", e.getMessage());

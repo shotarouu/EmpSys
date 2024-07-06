@@ -52,7 +52,7 @@ public class EmployeeUpdateAction implements ActionIF {
 			}
 
 			//業務ロジックの呼び出し
-			Employee employee = new Employee(Integer.parseInt(empId),empName,Integer.parseInt(departmentId),phone);
+			Employee employee = new Employee(Integer.parseInt(empId), empName, Integer.parseInt(departmentId), phone);
 
 			//登録用のロジック呼び出し
 			EmployeeUpdateLogic log = new EmployeeUpdateLogic();
